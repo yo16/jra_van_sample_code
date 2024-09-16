@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "出馬表サンプル", "出馬表サンプル.vbproj", "{A8FFD065-BFCB-4B7A-81EA-101843D433BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Debug|x64.ActiveCfg = Debug|x64
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Debug|x64.Build.0 = Debug|x64
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Debug|x86.ActiveCfg = Debug|x86
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Debug|x86.Build.0 = Debug|x86
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Release|x64.ActiveCfg = Release|x64
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Release|x64.Build.0 = Release|x64
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Release|x86.ActiveCfg = Release|x86
+		{A8FFD065-BFCB-4B7A-81EA-101843D433BC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26949BF5-79E5-4724-B705-1233F589822C}
+	EndGlobalSection
+EndGlobal

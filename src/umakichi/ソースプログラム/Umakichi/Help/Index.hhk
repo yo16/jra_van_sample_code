@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="起動方法">
+		<param name="Name" value="起動と終了">
+		<param name="Local" value="\\AST01\home\kondo\2003\umakichi\Help\StartAndEnd.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="動作環境">
+		<param name="Name" value="動作環境">
+		<param name="Local" value="Environment.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="馬吉の設定">
+		<param name="Name" value="馬吉の設定">
+		<param name="Local" value="Configration.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="設定">
+		<param name="Name" value="馬吉の設定">
+		<param name="Local" value="Configration.htm">
+		<param name="Name" value="JV-Linkの設定">
+		<param name="Local" value="JV-LinkConfigration.htm">
+		<param name="Name" value="データ取得の設定">
+		<param name="Local" value="DataFetch.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ブラウザの使い方">
+		<param name="Name" value="ブラウザの使い方">
+		<param name="Local" value="Usage\UsageBrowser.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="メニューパレットの使い方">
+		<param name="Name" value="メニューパレットの使い方">
+		<param name="Local" value="Usage\UsageMenuPalette.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="出馬表を見る">
+		<param name="Name" value="出馬表を見る">
+		<param name="Local" value="Usage\GetSyutubahyo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="オッズを見る">
+		<param name="Name" value="オッズを見る">
+		<param name="Local" value="Usage\GetOdds.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="競走馬の情報を見る">
+		<param name="Name" value="競走馬の情報を見る">
+		<param name="Local" value="Usage\GetKyosoba.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="総合メニュー">
+		<param name="Name" value="総合メニュー">
+		<param name="Local" value="Screen\1000_Home.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="出馬表開催選択">
+		<param name="Name" value="出馬表開催選択">
+		<param name="Local" value="Screen\1100_RAKaiSel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="出馬表選択">
+		<param name="Name" value="出馬表選択">
+		<param name="Local" value="Screen\1200_RASel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="出馬表">
+		<param name="Name" value="出馬表">
+		<param name="Local" value="Screen\1300_RA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="オッズ">
+		<param name="Name" value="オッズ">
+		<param name="Local" value="Screen\1400_OD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="票数">
+		<param name="Name" value="票数">
+		<param name="Local" value="Screen\1410_OD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="特別登録馬開催選択">
+		<param name="Name" value="特別登録開催選択">
+		<param name="Local" value="Screen\1500_TKKaiSel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="特別登録馬選択">
+		<param name="Name" value="特別登録選択">
+		<param name="Local" value="Screen\1600_TKSel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="特別登録馬">
+		<param name="Name" value="特別登録馬">
+		<param name="Local" value="Screen\1700_TK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="競走馬">
+		<param name="Name" value="競走馬">
+		<param name="Local" value="Screen\1800_UM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="調教師">
+		<param name="Name" value="調教師">
+		<param name="Local" value="Screen\1900_CH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="騎手">
+		<param name="Name" value="騎手">
+		<param name="Local" value="Screen\2000_KS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="生産者">
+		<param name="Name" value="生産者">
+		<param name="Local" value="Screen\2100_BR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="馬主">
+		<param name="Name" value="馬主">
+		<param name="Local" value="Screen\2200_BN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="繁殖馬">
+		<param name="Name" value="繁殖馬">
+		<param name="Local" value="Screen\2300_HN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="産駒">
+		<param name="Name" value="産駒">
+		<param name="Local" value="Screen\2400_SK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="レコード選択">
+		<param name="Name" value="レコード選択">
+		<param name="Local" value="Screen\2500_RCSel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="レコード">
+		<param name="Name" value="レコード">
+		<param name="Local" value="Screen\2600_RC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="坂路調教">
+		<param name="Name" value="坂路調教">
+		<param name="Local" value="Screen\2800_HCSel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="変更情報">
+		<param name="Name" value="変更情報">
+		<param name="Local" value="Screen\2900_HK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="検索">
+		<param name="Name" value="検索">
+		<param name="Local" value="Screen\3000_Find.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="JV-Linkの設定">
+		<param name="Name" value="JV-Linkの設定">
+		<param name="Local" value="JV-LinkConfigration.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="データ取得の設定">
+		<param name="Name" value="データ取得の設定">
+		<param name="Local" value="DataFetch.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="終了の仕方">
+		<param name="Name" value="起動と終了">
+		<param name="Local" value="\\AST01\home\kondo\2003\umakichi\Help\StartAndEnd.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

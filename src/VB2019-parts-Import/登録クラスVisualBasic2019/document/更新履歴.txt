@@ -1,0 +1,334 @@
+■２０２３年８月８日
+１．以下のテーブルを変更。詳細については、「データベース仕様書」を参照してください。
+	・競走馬マスタ
+	・生産者マスタ
+	・繁殖馬マスタ
+	・産駒マスタ
+	・競走馬市場取引価格
+	・系統情報
+
+■２０１２年１月１７日
+１．以下のクラスが追加になりました。
+	(テーブルに関する詳細については、「データベース仕様書」を参照して下さい。)
+	・clsImportJGクラス：競走馬除外情報
+	・clsImportTMクラス：対戦型マイニング予想
+	・clsImportWFクラス：重勝式
+	・basUtilityクラス：ユーティリティクラス
+
+２．JVData_Structure.vb
+２－１．出走別着度数用構造体を追加しました。
+２－２．対戦型データマイニング用構造体を追加しました。
+２－３．重勝式用構造体を追加しました。
+２－４．競走馬除外情報用構造体を追加しました。
+
+３．ODBC経由でmdb以外のデータベースを使用出来るように修正しました。
+
+■２００９年９月８日
+１．JVData_Structure.vb
+１－１．系統情報用構造体を追加しました。
+１－２．コース情報用構造体を追加しました。
+
+２．clsImportBT クラス
+２－１．系統情報データ用クラスとして新規追加しました。
+
+３．clsImportCS クラス
+３－１．コース情報データ用クラスとして新規追加しました。
+
+４．clsDBImport クラス
+４－１．系統情報処理を追加しました。
+４－２．コース情報処理を追加しました。
+
+５．data.mdb
+５－１．系統情報テーブル(KEITO)を追加しました。
+５－２．コース情報テーブル(COURSE)を追加しました。
+
+■２００７年１２月５日
+１．JVData_Structure.vb
+１－１．競走馬市場取引価格用構造体を追加しました。
+１－２．馬名の意味由来用構造体を追加しました。
+
+２．clsImportHS クラス
+２－１．競走馬市場取引価格データ用クラスとして新規追加しました。
+
+３．clsImportHY クラス
+３－１．馬名の意味由来データ用クラスとして新規追加しました。
+
+４．clsDBImport クラス
+４－１．競走馬市場取引価格処理を追加しました。
+４－２．馬名の意味由来処理を追加しました。
+
+５．data.mdb
+５－１．競走馬市場取引価格テーブル(SALE)を追加しました。
+５－２．馬名の意味由来テーブル(BAMEIORIGIN)を追加しました。
+
+６．frmDataImport.vb
+６－１．JVReadの戻り値の処理に、－４０２、－４０３、－５０２を追加しました。
+６－２．JVReadの戻り値に誤りがあるので修正しました。
+（修正前）
+            Case -201   ' Openされてない
+                MsgBox "JVOpenが行われていません。"
+                Exit Do
+            Case -203   ' Initされてない
+                MsgBox "JVInitが行われていません。"
+                Exit Do
+（修正後）
+            Case -201   ' Initされてない
+                MsgBox "JVInitが行われていません。"
+                Exit Do
+            Case -203   ' Openされてない
+                MsgBox "JVOpenが行われていません。"
+                Exit Do
+
+
+■２００７年７月２０日
+１．clsImportO6クラス
+１－１．UpdateDBメソッドにおいて、ループ回数に誤りがあるので修正しました。
+（誤）
+       ' ODDS_SANRENTAN (オッズ_3連単)
+        For i = 0 To 815
+
+（正）
+       ' ODDS_SANRENTAN (オッズ_3連単)
+        For i = 0 To 4895
+
+２．clsImportRC.vb
+２－１．UpdateDBメソッドにおいて、キー項目に不足があるので修正しました。
+（修正前）
+        strSql = strSql & " WHERE [Year]='" & Replace(.Year, "'", "''") & "'"
+        strSql = strSql & " AND [MonthDay]='" & Replace(.MonthDay, "'", "''") & "'"
+
+ (修正後）
+        strSql = strSql & " WHERE [RecInfoKubun]='" & Replace(.Year, "'", "''") & "'"
+        strSql = strSql & " AND [Year]='" & Replace(.Year, "'", "''") & "'"
+        strSql = strSql & " AND [MonthDay]='" & Replace(.MonthDay, "'", "''") & "'"
+
+■２００６年１１月１０日
+１．clsImportSEクラス
+１－１．UpdateDBメソッドにおいて、誤りがあるので修正しました。
+（誤）
+            strSQL = strSQL & "[KettoNum1]='" & Replace(.KettoNum, "'", "''") & "'," '' 血統登録番号（相手馬1）
+            strSQL = strSQL & "[Bamei1]='" & Replace(.Bamei, "'", "''") & "'," '' 馬名
+            strSQL = strSQL & "[KettoNum2]='" & Replace(.KettoNum, "'", "''") & "'," '' 血統登録番号（相手馬2）
+            strSQL = strSQL & "[Bamei2]='" & Replace(.Bamei, "'", "''") & "'," '' 馬名
+            strSQL = strSQL & "[KettoNum3]='" & Replace(.KettoNum, "'", "''") & "'," '' 血統登録番号（相手馬3）
+            strSQL = strSQL & "[Bamei3]='" & Replace(.Bamei, "'", "''") & "'," '' 馬名
+
+（正）
+            For i = 0 To 2
+                With .ChakuUmaInfo(i)
+                    strSql = strSql & "[KettoNum" & i + 1 & "]='" & Replace(.KettoNum, "'", "''") & "'," '' 血統登録番号（相手馬1～3）
+                    strSql = strSql & "[Bamei" & i + 1 & "]='" & Replace(.Bamei, "'", "''") & "'," '' 馬名（相手馬1～3）
+                End With ' ChakuUmaInfo
+            Next i
+
+■２００６年６月６日
+１．以下のテーブルを変更。詳細については、「データベース仕様書」を参照してください。
+	・競走馬マスタ
+
+■２００４年８月１０日
+１．３連単対応に関するテーブルの追加に合わせ、以下のクラスが追加になりました。
+	(テーブルに関する詳細については、「データベース仕様書」を参照して下さい。)
+	・clsImportH6クラス：票数(３連単)
+	・clsImportO6クラス：オッズ(３連単)
+	・clsImportTCクラス：発走時刻変更
+	・clsImportCCクラス：コース変更
+
+２．３連単対応に関するテーブルのカラム名変更に合わせ、以下のクラスが変更になりました。
+	(テーブルに関する詳細については、「データベース仕様書」を参照して下さい。)
+	・clsImportHRクラス：払戻し
+
+３．読み込みバッファのサイズの誤りを修正しました。(フォームの取り込みボタン押下時)
+（誤）30000
+ (正）110000
+
+４．ImportH1クラス
+４－１．３連複が未発売のレースにおいて正常に登録されない不具合を修正しました。
+
+
+■２００３年１０月７日
+１．clsImportWHクラス
+１－１．馬体重のInsertDBメソッドにおいて、誤りがあるので修正しました。
+（誤）
+                mRS.Fields("Kanji").Value = .Kaiji '' 開催回第N回
+（正）
+                mRS.Fields("Kaiji").Value = .Kaiji '' 開催回第N回
+
+
+■２００３年９月９日
+１．frmDataImport.frm サンプルフォーム
+１－１．読込み用ループ処理に Application.DoEvents() を追加しました。
+１－２．objConnect の生成/破棄のタイミングに不都合があったので、修正しました。
+
+２．JVData_Structure.vb 構造体
+２－１．構造体を更新しました。
+
+
+
+■２００３年８月２０日
+
+１．clsImportSEクラス
+１－１．InsertDBメソッドにおいて、誤りがあるので修正しました。
+（誤）
+	mRS.Fields("FutanBefore").Value = .FutanBefore '' 変更前負担重量
+        mRS.Fields("FutanBefore").Value = .Blinker '' ブリンカー使用区分
+
+ (正）
+	mRS.Fields("FutanBefore").Value = .FutanBefore '' 変更前負担重量
+        mRS.Fields("Blinker").Value = .Blinker '' ブリンカー使用区分
+
+
+■２００３年７月２３日
+１．clsImportWEクラス
+１－１．UpdateDBメソッドにおいて、誤りがあるので修正しました。
+（誤）
+                strSql = strSql & " AND [HenkoID]='" & Replace(.HenkoID, "'", "''") & "'"
+（正）
+                strSql = strSql & " AND [HenkoID]='" & Replace(mBuf.HenkoID, "'", "''") & "'"
+
+■２００３年６月２０日
+
+１．frmDataImport.frm サンプルフォーム
+１－１．JVOpen 実行前の lngOptionFlagの不正な初期値設定を削除しました。
+（削除文） 
+        lngOptionFlag = 1
+
+２．名称変更
+２－１．クラス名称を clsDBConnect から clsDBImportに変更しました。
+
+３．clsImportCHクラス
+３－１．InsertDBメソッドにおいて、mRS2.AddNEW の位置に誤りがあるので修正しました。
+（誤）
+	mRS2.AddNew
+    　　　For i = 0 To 2
+		.
+		.
+	　Next i
+    	mRS2.Update
+
+ (正）
+	For i = 0 To 2
+　　　	　mRS2.AddNew
+		.
+		.
+	  mRS2.Update
+	Next i
+
+４．clsImportDMクラス
+４－１．UpdateDBメソッドにおいて フィールド名の誤りを修正しました。
+
+　          strSql = strSql & "[Hour]='" & Replace(.Hour, "'", "''") & "'," '' 時
+            strSql = strSql & "[Minute]='" & Replace(.Minute, "'", "''") & "'," '' 分
+    		.
+		.
+            strSql = strSql & "[Umaban]='" & Replace(.Umaban, "'", "''") & "'," '' 馬番
+            strSql = strSql & "[DMTime]='" & Replace(.DMTime, "'", "''") & "'," '' 予想走破タイム
+            strSql = strSql & "[DMGosaP]='" & Replace(.DMGosaP, "'", "''") & "'," '' 予想誤差(信頼度)＋
+            strSql = strSql & "[DMGosaM]='" & Replace(.DMGosaM, "'", "''") & "'," '' 予想誤差(信頼度)－
+（正）
+            strSql = strSql & "[MakeHM]='" & Replace(.Hour, "'", "''") & Replace(.Minute, "'", "''") & "'," '' 時分
+    		.
+		.
+            strSql = strSql & "[Umaban" + i + 1 + "]='" & Replace(.Umaban, "'", "''") & "',"           '' 馬番
+            strSql = strSql & "[DMTime" + i + 1 + "]='" & Replace(.DMTime, "'", "''") & "',"           '' 予想走破タイム
+            strSql = strSql & "[DMGosaP" + i + 1 + "]='" & Replace(.DMGosaP, "'", "''") & "',"         '' 予想誤差(信頼度)＋
+            strSql = strSql & "[DMGosaM" + i + 1 + "]='" & Replace(.DMGosaM, "'", "''") & "',"         '' 予想誤差(信頼度)－
+
+
+５．clsImportH1クラス
+５－１．「票数_馬連・ワイド」のInsertDBメソッドにおいて フィールド名の誤りを修正しました。
+（誤）
+　　　　mRS4!UmarenHyo = .Ninki             '' 人気
+（正）
+　　　　mRS4!UmarenNinki = .Ninki             '' 人気
+
+
+６．clsImportJCクラス
+６－１．UpdateDBメソッドにおいて フィールド名の誤りを修正しました。
+（誤）
+        With .JCInfoAfter
+            strSql = strSql & "[Futan]='" & Replace(.Futan, "'", "''") & "',"             '' 負担重量
+            strSql = strSql & "[KisyuCode]='" & Replace(.KisyuCode, "'", "''") & "',"     '' 騎手コード
+            strSql = strSql & "[KisyuName]='" & Replace(.KisyuName, "'", "''") & "',"     '' 騎手名
+            strSql = strSql & "[MinaraiCD]='" & Replace(.MinaraiCD, "'", "''") & "',"     '' 騎手見習コード
+        End With ' JCInfoAfter
+        With .JCInfoBefore
+            strSql = strSql & "[Futan]='" & Replace(.Futan, "'", "''") & "',"             '' 負担重量
+            strSql = strSql & "[KisyuCode]='" & Replace(.KisyuCode, "'", "''") & "',"     '' 騎手コード
+            strSql = strSql & "[KisyuName]='" & Replace(.KisyuName, "'", "''") & "',"     '' 騎手名
+            strSql = strSql & "[MinaraiCD]='" & Replace(.MinaraiCD, "'", "''") & "',"     '' 騎手見習コード
+        End With ' JCInfoBefore
+（正）
+        With .JCInfoAfter
+            strSql = strSql & "[AtoFutan]='" & Replace(.Futan, "'", "''") & "',"             '' 負担重量
+            strSql = strSql & "[AtoKisyuCode]='" & Replace(.KisyuCode, "'", "''") & "',"     '' 騎手コード
+            strSql = strSql & "[AtoKisyuName]='" & Replace(.KisyuName, "'", "''") & "',"     '' 騎手名
+            strSql = strSql & "[AtoMinaraiCD]='" & Replace(.MinaraiCD, "'", "''") & "',"     '' 騎手見習コード
+        End With ' JCInfoAfter
+        With .JCInfoBefore
+            strSql = strSql & "[MaeFutan]='" & Replace(.Futan, "'", "''") & "',"             '' 負担重量
+            strSql = strSql & "[MaeKisyuCode]='" & Replace(.KisyuCode, "'", "''") & "',"     '' 騎手コード
+            strSql = strSql & "[MaeKisyuName]='" & Replace(.KisyuName, "'", "''") & "',"     '' 騎手名
+            strSql = strSql & "[MaeMinaraiCD]='" & Replace(.MinaraiCD, "'", "''") & "',"     '' 騎手見習コード
+        End With ' JCInfoBefore
+
+
+７．clsImportO1クラス
+７－１．終了処理（Terminate)が抜けていたので、追加しました。
+
+
+８．clsImportO5クラス
+８－１．UPDATE処理において フィールド名の誤りを修正しました。
+（誤）
+       strSql = strSql & "[SanrenpukuFlag]='" & Replace(.SanrenpukuFlag, "'", "''") & "',"               '' 発売フラグ　3連複
+       strSql = strSql & "[TotalHyosuSanrenpuku]='" & Replace(.TotalHyosuSanrenpuku, "'", "''") & "'" '' 3連複票数合計
+    		.
+		.
+       strSql = strSql & "[RaceNum]='" & Replace(.RaceNum, "'", "''") & "'" '' レース番号
+
+（正）
+       strSql = strSql & "[SanrenFlag]='" & Replace(.SanrenpukuFlag, "'", "''") & "',"               '' 発売フラグ　3連複
+       strSql = strSql & "[TotalHyosuSanren]='" & Replace(.TotalHyosuSanrenpuku, "'", "''") & "'" '' 3連複票数合計
+    		.
+		.
+       strSql = strSql & "[RaceNum]='" & Replace(.RaceNum, "'", "''") & "'," '' レース番号
+
+
+９．clsImportRCクラス
+９－１．終了処理(Terminate)が抜けていたので、追加しました。
+
+
+１０．clsImportTKクラス
+１０－１．InsertDBメソッドにおいて（馬毎部分の追加）を修正しました。
+（誤）
+    For i = 0 To mBuf.TorokuTosu - 1
+		.
+		.
+           mRS1!MakeDate = .Year & .Month & .Day                    '' 年月日
+（正）
+    For i = 0 To mBuf.TorokuTosu - 1
+		.
+		.
+           mRS2!MakeDate = .Year & .Month & .Day                    '' 年月日
+
+
+１０－２．UpdateDBメソッド（馬毎部分）を修正しました。
+（誤）
+    If tmpRS Is Nothing Then
+    		.
+		.
+    End If                  
+
+
+（正）
+    If tmpRS Is Nothing Then
+    Else
+    		.
+		.
+    End If                  
+
+
+
+１１．clsImportWEクラス
+１１－１．UpdateDBメソッドの フィールド名の誤りを修正しました。
+１１－２．WHEREキーに、HappyoTime と　HenkoIDを追加しました。
+

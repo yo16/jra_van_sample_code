@@ -1,0 +1,66 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=..\umakichi.chm
+Contents file=G:\B135-A1-C01_馬吉ソースコード公開対応\home\gohei\vss\Help\Table of Contents.hhc
+Default Font=ＭＳ ゴシック,11,0
+Default Window=TOC
+Default topic=Welcome.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x411 日本語
+Title=馬吉ヘルプ
+
+[WINDOWS]
+TOC="馬吉ヘルプ","Table of Contents.hhc","Index.hhk","Welcome.htm",,,,,,0x2120,,0x3006,,,,,,,,0
+
+
+[FILES]
+Beginning.htm
+Configration.htm
+DataFetch.htm
+Environment.htm
+JV-LinkConfigration.htm
+StartAndEnd.htm
+Welcome.htm
+Screen\1000_Home.htm
+Screen\1100_RAKaiSel.htm
+Screen\1200_RASel.htm
+Screen\1300_RA.htm
+Screen\1301_RA.htm
+Screen\1302_RA.htm
+Screen\1303_RA.htm
+Screen\1304_RA.htm
+Screen\1305_RA.htm
+Screen\1306_RA.htm
+Screen\1307_RA.htm
+Screen\1400_OD.htm
+Screen\1410_OD.htm
+Screen\1500_TKKaiSel.htm
+Screen\1600_TKSel.htm
+Screen\1700_TK.htm
+Screen\1800_UM.htm
+Screen\1900_CH.htm
+Screen\2000_KS.htm
+Screen\2100_BR.htm
+Screen\2200_BN.htm
+Screen\2300_HN.htm
+Screen\2400_SK.htm
+Screen\2500_RCSel.htm
+Screen\2600_RC.htm
+Screen\2800_HCSel.htm
+Screen\2900_HK.htm
+Screen\3000_Find.htm
+Usage\GetKyosoba.htm
+Usage\GetOdds.htm
+Usage\GetSyutubahyo.htm
+Usage\UsageBrowser.htm
+Usage\UsageMenuPalette.htm
+Usage\HowToFind.htm
+Trouble\Backup.htm
+Trouble\CantBoot.htm
+Trouble\DataTorokuError.htm
+Trouble\FuanteiDousa.htm
+Trouble\ReSetup.htm
+
+[INFOTYPES]
+

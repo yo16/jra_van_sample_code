@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{078AE11D-ECE6-468B-8BA4-B1B102A08B37}</ProjectGuid>
+    <SccProjectName>"$/11 DataLab/プログラミングパーツ/JV-Data登録クラス/登録クラスVCNET", ZHMAAAAA</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CJVLink.cpp" />
+    <ClCompile Include="clsDBImport.cpp" />
+    <ClCompile Include="clsImportAV.cpp" />
+    <ClCompile Include="clsImportBN.cpp" />
+    <ClCompile Include="clsImportBR.cpp" />
+    <ClCompile Include="clsImportBT.cpp" />
+    <ClCompile Include="clsImportCC.cpp" />
+    <ClCompile Include="clsImportCH.cpp" />
+    <ClCompile Include="clsImportCS.cpp" />
+    <ClCompile Include="clsImportDM.cpp" />
+    <ClCompile Include="clsImportH1.cpp" />
+    <ClCompile Include="clsImportH6.cpp" />
+    <ClCompile Include="clsImportHC.cpp" />
+    <ClCompile Include="clsImportHN.cpp" />
+    <ClCompile Include="clsImportHR.cpp" />
+    <ClCompile Include="clsImportHS.cpp" />
+    <ClCompile Include="clsImportHY.cpp" />
+    <ClCompile Include="clsImportJC.cpp" />
+    <ClCompile Include="clsImportKS.cpp" />
+    <ClCompile Include="clsImportO1.cpp" />
+    <ClCompile Include="clsImportO2.cpp" />
+    <ClCompile Include="clsImportO3.cpp" />
+    <ClCompile Include="clsImportO4.cpp" />
+    <ClCompile Include="clsImportO5.cpp" />
+    <ClCompile Include="clsImportO6.cpp" />
+    <ClCompile Include="clsImportRA.cpp" />
+    <ClCompile Include="clsImportRC.cpp" />
+    <ClCompile Include="clsImportSE.cpp" />
+    <ClCompile Include="clsImportSK.cpp" />
+    <ClCompile Include="clsImportTC.cpp" />
+    <ClCompile Include="clsImportTK.cpp" />
+    <ClCompile Include="clsImportUM.cpp" />
+    <ClCompile Include="clsImportWE.cpp" />
+    <ClCompile Include="clsImportWH.cpp" />
+    <ClCompile Include="clsImportYS.cpp" />
+    <ClCompile Include="DataImport.cpp" />
+    <ClCompile Include="DataImportDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CJVLink.h" />
+    <ClInclude Include="clsDBImport.h" />
+    <ClInclude Include="clsImportAV.h" />
+    <ClInclude Include="clsImportBN.h" />
+    <ClInclude Include="clsImportBR.h" />
+    <ClInclude Include="clsImportBT.h" />
+    <ClInclude Include="clsImportCC.h" />
+    <ClInclude Include="clsImportCH.h" />
+    <ClInclude Include="clsImportCS.h" />
+    <ClInclude Include="clsImportDM.h" />
+    <ClInclude Include="clsImportH1.h" />
+    <ClInclude Include="clsImportH6.h" />
+    <ClInclude Include="clsImportHC.h" />
+    <ClInclude Include="clsImportHN.h" />
+    <ClInclude Include="clsImportHR.h" />
+    <ClInclude Include="clsImportHS.h" />
+    <ClInclude Include="clsImportHY.h" />
+    <ClInclude Include="clsImportJC.h" />
+    <ClInclude Include="clsImportKS.h" />
+    <ClInclude Include="clsImportO1.h" />
+    <ClInclude Include="clsImportO2.h" />
+    <ClInclude Include="clsImportO3.h" />
+    <ClInclude Include="clsImportO4.h" />
+    <ClInclude Include="clsImportO5.h" />
+    <ClInclude Include="clsImportO6.h" />
+    <ClInclude Include="clsImportRA.h" />
+    <ClInclude Include="clsImportRC.h" />
+    <ClInclude Include="clsImportSE.h" />
+    <ClInclude Include="clsImportSK.h" />
+    <ClInclude Include="clsImportTC.h" />
+    <ClInclude Include="clsImportTK.h" />
+    <ClInclude Include="clsImportUM.h" />
+    <ClInclude Include="clsImportWE.h" />
+    <ClInclude Include="clsImportWH.h" />
+    <ClInclude Include="clsImportYS.h" />
+    <ClInclude Include="DataImport.h" />
+    <ClInclude Include="DataImportDlg.h" />
+    <ClInclude Include="JVData_Structure.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DataImport.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\DataImport.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DataImport.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DataImport.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
